@@ -1,6 +1,8 @@
 # UserTask
 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+used json server for backend dummy api install through link /assets/posts.json and run command json-server --watch posts.json
 
 ## Development server
 
