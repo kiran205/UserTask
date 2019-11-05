@@ -1,0 +1,104 @@
+/*****navar css****/
+.navbar .navbar-brand {
+  color: #fff;
+  padding-left: 0;
+  padding-right: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bg-light {
+  background-color: #2f8bbd !important;
+}
+
+.nav-link img {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -8px 0;
+  float: left;
+  margin-right: 10px;
+}
+
+.navbar .nav-item.open>a {
+  background: none !important;
+}
+
+.navbar .dropdown-menu {
+  border-radius: 1px;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar .dropdown-menu li a {
+  color: #777;
+  padding: 8px 15px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.navbar .dropdown-menu li a:hover,
+.navbar .dropdown-menu li a:active {
+  color: #333;
+}
+
+
+/*****review css****/
+.btn-primary {
+  background-color: #2f8bbd;
+  border: #2f8bbd;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+:focus {
+  outline: none !important;
+}
+
+.example-table-container {
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.example-table-container:hover {
+  position: relative;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+#table-scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+#table-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+#table-scroll::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #ccccce;
+  border-radius: 10px;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.pleft-20 {
+  padding-left: 20px;
+}
+
+.btn-confirm {
+  float: right;
+}

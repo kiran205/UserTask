@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+  <a class="navbar-brand">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav navbar-right ml-auto">
+      <li class="nav-item dropdown">
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle"><img src="assets/images/user-1.png"
+            class="rounded-circle" alt="User image"> {{loggedInUserDetails.name}} <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item"><i class="far fa-user"></i> Profile</a></li>
+          <li><a class="dropdown-item"><i class="fas fa-user-cog"></i> Settings</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="logOut()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="10px">
+    <div fxFlex="60">
+      <div class="review-post">
+        <form [formGroup]="postReviewform" (ngSubmit)="postdata()">
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" formControlName="PostComment" rows="3" id="comment"></textarea>
+          </div>
+          <div class="text-right">
+            <button type="button" class="btn">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="postdata()">Post</button>
+          </div>
+        </form>
+      </div>
+      <br>
+
+      <div class="example-table-container" id="table-scroll">
+        <div *ngFor="let data of getdata1">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="10px">
+            <div fxFlex="8">
+              <img src="assets/images/user-2.png" class="rounded-circle" width="50" alt="user-image">
+            </div>
+            <div fxFlex="85">
+              <p class="no-margin"> {{data?.createdUsername}} <span class="pleft-20 text-info"> <small>
+                    {{data?.CreatedOn  }} </small> </span> </p>
+              <h6> {{data?.PostComment}} </h6>
+              <p class="no-margin">
+                <span *ngIf="data?.UserLikes.length === 0"> <i (click)="like(data)" class="far fa-thumbs-up"></i> &nbsp;
+                </span>
+                <span *ngIf="data?.UserLikes.length !== 0"> <i (click)="like(data)" class="fas fa-thumbs-up text-primary"></i> 
+                  &nbsp; </span>
+                  <span class="text-danger"><i (click)="deletePost(data)" class="far fa-trash-alt"></i>  </span>
+
+
+                 
+                
+              </p>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "UserLikes": [
+        {
+          "LikenUserId": 1,
+          "LikedUserName": "Sandeep"
+        }
+      ],
+      "PostComment": "how are you ?",
+      "createdUsername": "Sandeep",
+      "createdUserId": 1,
+      "CreatedOn": "05-11-2019 11:07:20 AM",
+      "id": 9
+    },
+    {
+      "UserLikes": [
+        {
+          "LikenUserId": 2,
+          "LikedUserName": "Vikas"
+        }
+      ],
+      "PostComment": "how are you ?",
+      "createdUsername": "Vikas",
+      "createdUserId": 2,
+      "CreatedOn": "05-11-2019 11:07:20 AM",
+      "id": 10
+    },
+    {
+      "PostComment": "Remember to add or claim listings on the top business review sites",
+      "createdUsername": "Ratan",
+      "createdUserId": 4,
+      "CreatedOn": "05-11-2019 04:56:50 PM",
+      "UserLikes": [],
+      "id": 11
+    }
+  ]
+}

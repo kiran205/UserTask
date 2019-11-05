@@ -1,0 +1,12 @@
+.confirm-dialog {
+  padding: 20px;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+:focus {
+  outline: none !important;
+}

@@ -1,0 +1,71 @@
+
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="10px">
+  <div fxFlex="40">
+      <div class="login-form">
+          <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+          <form (ngSubmit)="login(loginForm)" #loginForm="ngForm" autocomplete="off">
+            <div class="avatar"><i class="far fa-user"></i></div>
+            <h4 class="modal-title" [routerLink]="['/userDashboard']">Login to Your Account</h4>
+            <div class="form-group">
+              <input type="text" class="form-control" id="userNameId" [type]="maskUserName ? 'password' : 'text'"
+                placeholder="User Name (required)" required ngModel name="userName" #userNameVar="ngModel"
+                [ngClass]="{'is-invalid': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }"
+                placeholder="Username" required="required">
+              <div class="invalid-feedback"
+                *ngIf="(userNameVar.touched || userNameVar.dirty) && passwordVar.hasError('required')">
+                User name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="password" id="passwordId" type="password" placeholder="Password (required)" required ngModel
+                name="password" #passwordVar="ngModel"
+                [ngClass]="{'is-invalid': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }"
+                class="form-control" placeholder="Password" required="required">
+              <div class="invalid-feedback"
+                *ngIf="(passwordVar.touched || passwordVar.dirty) && passwordVar.hasError('required')">
+                Password is required.
+              </div>
+            </div>
+            <div class="form-group small clearfix">
+              <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
+              <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg"> Login </button>
+          </form>
+        </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="login-form">
+          <form [formGroup]="loginForm" (ngSubmit)="onLoginClick(LoginForm.value)">
+            <div class="avatar"><i class="far fa-user"></i></div>        
+            <h4 class="modal-title" [routerLink]="['/dashBoard']">Login to Your Account</h4>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+            <div class="form-group small clearfix">
+              <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
+              <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg"> Login </button>
+          </form>        
+        </div>
+      </div>
+    </div>
+  </div> -->

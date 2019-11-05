@@ -1,0 +1,32 @@
+
+<!-- <div class="confirm-dialog text-center">  
+    <h4>Are you sure to delete</h4>  
+  <br> 
+  <div class="btn-confirm text-center">
+      <button type="button" (click)="deletePost(data)"  class="btn btn-danger">Yes</button> &nbsp;
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">No</button>
+  </div>
+
+</div> -->
+
+
+
+<div class="modal-header  confirm-header" data-backdrop="false">
+  <h4 class="modal-title contirm-title">{{ title }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{ message }}
+  </div>
+  <div class="modal-footer confirm-footer">
+    <button type="button" class="btn btn-sm btn-danger" (click)="decline()">{{ btnCancelText }}</button>
+    <button type="button" class="btn btn-sm btn-primary" (click)="accept()">{{ btnOkText }}</button>
+  </div>
+
+
+
+  
+
+

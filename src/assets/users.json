@@ -1,0 +1,35 @@
+{
+    
+    "users": [
+      {
+        "id": 1,
+        "userId": 1,
+        "name": "Sandeep",
+        "password": "Sandeep@123"   
+      },
+      {
+        "id": 2,
+        "userId": 2,
+        "name": "Vikas",
+        "password": "Vikas@123"    
+      },
+      {
+        "id": 3,
+        "userId": 3,
+        "name": "Naresh",
+        "password": "Naresh@123"    
+      },
+      {
+        "id": 4,
+        "userId": 4,
+        "name": "Ratan",
+        "password": "Ratan@123"    
+      },
+      {
+        "id": 5,
+        "userId": 5,
+        "name": "Suresh",
+        "password": "Suresh@123"    
+      }
+    ]
+  }
